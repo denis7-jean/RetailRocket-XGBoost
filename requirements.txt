@@ -1,0 +1,10 @@
+pandas
+numpy
+pyarrow
+scikit-learn
+matplotlib
+seaborn
+jupyter
+xgboost
+kaggle
+tqdm
