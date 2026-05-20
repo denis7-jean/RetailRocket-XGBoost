@@ -28,6 +28,9 @@ kaggle.json
 Thumbs.db
 .vscode/
 .idea/
+.ipython/
+.jupyter/
+.matplotlib/
 
 # Data artifacts
 data/raw/*

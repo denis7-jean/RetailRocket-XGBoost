@@ -38,6 +38,8 @@ For each time split:
 
 This setup is intended to model near-future purchase conversion from recent visitor-item behavior.
 
+Initial EDA note: the planned candidate-pair framing is feasible but strongly imbalanced. In the current planned splits, only about 0.021% to 0.025% of observation-window candidate pairs become matched future transaction pairs in the following label window. The dataset builder should continue reporting candidate counts, matched positive pairs, and positive rates for every split.
+
 ## Time-Based Split Strategy
 
 The experiment uses chronological splits to reduce leakage and better reflect a real production scoring setup.
