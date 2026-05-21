@@ -40,6 +40,8 @@ This setup is intended to model near-future purchase conversion from recent visi
 
 Initial EDA note: the planned candidate-pair framing is feasible but strongly imbalanced. In the current planned splits, only about 0.021% to 0.025% of observation-window candidate pairs become matched future transaction pairs in the following label window. The dataset builder should continue reporting candidate counts, matched positive pairs, and positive rates for every split.
 
+V1 dataset-building note: `src/02_build_datasets.py` uses the High-Intent Hybrid candidate formulation as the default modeling target. Candidate pairs must have at least one observation-window `addtocart` event or at least two observation-window `view` events. Training uses five rolling Policy 2 snapshots, while validation and test remain fixed chronological windows. The broad observed-pair formulation is retained in `outputs/metrics/dataset_build_report.csv` as a diagnostic baseline.
+
 ## Time-Based Split Strategy
 
 The experiment uses chronological splits to reduce leakage and better reflect a real production scoring setup.
@@ -51,6 +53,8 @@ The experiment uses chronological splits to reduce leakage and better reflect a 
 | Test | 2015-07-30 to 2015-08-28 | 2015-08-29 to 2015-09-11 |
 
 All features should be computed only from the observation window for that split. Labels should be computed only from the following label window.
+
+For model training, the V1 builder expands the original train period into five rolling 30-day observation and 14-day label snapshots ending before the validation label period. Validation and test stay fixed so model selection and final evaluation remain comparable.
 
 ## High-Level Feature Engineering Plan
 
@@ -134,7 +138,8 @@ RetailRocket-XGBoost/
 |   |-- metrics/
 |   `-- models/
 |-- src/
-|   `-- 01_prepare_events.py
+|   |-- 01_prepare_events.py
+|   `-- 02_build_datasets.py
 |-- .gitignore
 |-- PROJECT_PLAN.md
 |-- README.md

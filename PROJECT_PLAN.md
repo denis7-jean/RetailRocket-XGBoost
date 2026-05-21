@@ -21,12 +21,12 @@ This checklist tracks the implementation phases for the RetailRocket purchase co
 
 ## 3. Build Time-Windowed Train, Validation, and Test Datasets
 
-- [ ] Define split configuration for observation and label windows.
-- [ ] Implement reusable window filtering utilities.
-- [ ] Generate candidate `(visitorid, itemid)` pairs from each observation window.
-- [ ] Create labels from transaction events in each following 14-day label window.
-- [ ] Validate that feature windows do not overlap label windows.
-- [ ] Save split-level datasets under `data/processed/`.
+- [x] Define split configuration for observation and label windows.
+- [x] Implement reusable window filtering utilities.
+- [x] Generate candidate `(visitorid, itemid)` pairs from each observation window.
+- [x] Create labels from transaction events in each following 14-day label window.
+- [x] Validate that feature windows do not overlap label windows.
+- [x] Save split-level datasets under `data/processed/`.
 
 ## 4. Create Behavioral Features
 
