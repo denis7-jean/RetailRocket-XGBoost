@@ -48,6 +48,8 @@ Baseline modeling note: `src/04_train_logistic_baseline.py` trains a scikit-lear
 
 CPU XGBoost note: `src/05_train_xgboost_cpu.py` trains histogram-based CPU XGBoost models, including medium imbalance-sensitivity runs and a heavier comparison model. Metrics are evaluated with PR-AUC, ROC-AUC, threshold policies, and ranking metrics, with PR-AUC and Precision@K treated as the primary indicators for this imbalanced task.
 
+GPU XGBoost note: `src/06_train_xgboost_gpu.py` verifies CUDA availability, trains matching histogram-based GPU XGBoost configurations, and writes a CPU/GPU comparison table. The GPU run benchmarks training speed against the CPU models while preserving the same leakage-safe feature matrices and validation-only threshold selection.
+
 ## Time-Based Split Strategy
 
 The experiment uses chronological splits to reduce leakage and better reflect a real production scoring setup.
@@ -148,7 +150,8 @@ RetailRocket-XGBoost/
 |   |-- 02_build_datasets.py
 |   |-- 03_build_features.py
 |   |-- 04_train_logistic_baseline.py
-|   `-- 05_train_xgboost_cpu.py
+|   |-- 05_train_xgboost_cpu.py
+|   `-- 06_train_xgboost_gpu.py
 |-- .gitignore
 |-- PROJECT_PLAN.md
 |-- README.md

@@ -57,12 +57,12 @@ This checklist tracks the implementation phases for the RetailRocket purchase co
 
 ## 7. Train GPU XGBoost
 
-- [ ] Verify CUDA-enabled XGBoost can access the RTX 5070 Ti.
-- [ ] Configure XGBoost with `tree_method="hist"` and `device="cuda"`.
-- [ ] Train medium GPU model.
-- [ ] Train heavier GPU model.
-- [ ] Record training time for each configuration.
-- [ ] Save model artifacts and metrics.
+- [x] Verify CUDA-enabled XGBoost can access the RTX 5070 Ti.
+- [x] Configure XGBoost with `tree_method="hist"` and `device="cuda"`.
+- [x] Train medium GPU model.
+- [x] Train heavier GPU model.
+- [x] Record training time for each configuration.
+- [x] Save model artifacts and metrics.
 
 ## 8. Evaluate and Compare Models
 
