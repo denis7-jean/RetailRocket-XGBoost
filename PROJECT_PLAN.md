@@ -49,11 +49,11 @@ This checklist tracks the implementation phases for the RetailRocket purchase co
 
 ## 6. Train CPU XGBoost
 
-- [ ] Configure XGBoost with `tree_method="hist"`.
-- [ ] Train medium CPU model.
-- [ ] Train heavier CPU model.
-- [ ] Record training time for each configuration.
-- [ ] Save model artifacts and metrics.
+- [x] Configure XGBoost with `tree_method="hist"`.
+- [x] Train medium CPU model.
+- [x] Train heavier CPU model.
+- [x] Record training time for each configuration.
+- [x] Save model artifacts and metrics.
 
 ## 7. Train GPU XGBoost
 

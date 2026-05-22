@@ -46,6 +46,8 @@ V1 feature-building note: `src/03_build_features.py` creates leakage-safe behavi
 
 Baseline modeling note: `src/04_train_logistic_baseline.py` trains a scikit-learn Logistic Regression pipeline with standard scaling and balanced class weights. This model serves as the linear reference point before the CPU and GPU XGBoost experiments.
 
+CPU XGBoost note: `src/05_train_xgboost_cpu.py` trains histogram-based CPU XGBoost models, including medium imbalance-sensitivity runs and a heavier comparison model. Metrics are evaluated with PR-AUC, ROC-AUC, threshold policies, and ranking metrics, with PR-AUC and Precision@K treated as the primary indicators for this imbalanced task.
+
 ## Time-Based Split Strategy
 
 The experiment uses chronological splits to reduce leakage and better reflect a real production scoring setup.
@@ -145,7 +147,8 @@ RetailRocket-XGBoost/
 |   |-- 01_prepare_events.py
 |   |-- 02_build_datasets.py
 |   |-- 03_build_features.py
-|   `-- 04_train_logistic_baseline.py
+|   |-- 04_train_logistic_baseline.py
+|   `-- 05_train_xgboost_cpu.py
 |-- .gitignore
 |-- PROJECT_PLAN.md
 |-- README.md
