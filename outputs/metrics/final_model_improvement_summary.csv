@@ -1,0 +1,3 @@
+model_family,selected_model_name,validation_pr_auc_multiplier,test_pr_auc_multiplier,test_precision_at_100_difference,test_recall_at_100_difference,test_precision_at_500_difference,test_recall_at_500_difference
+CPU XGBoost,xgboost_cpu_medium_spw_ratio_mds1,1.9216115646881233,1.978400360241615,0.010000000000000002,0.017543859649122806,0.0,0.0
+GPU XGBoost,xgboost_gpu_medium_spw_ratio_mds1,1.3690549734934747,2.415727680433311,0.010000000000000002,0.017543859649122806,0.0,0.0

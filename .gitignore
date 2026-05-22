@@ -40,13 +40,27 @@ data/processed/*
 !data/interim/.gitkeep
 !data/processed/.gitkeep
 
-# Model and experiment outputs
+# Model artifacts
 outputs/models/*
-outputs/figures/*
-outputs/metrics/*
 !outputs/models/.gitkeep
+
+# Keep final result figures for GitHub presentation.
+# Ignore intermediate figures by default.
+outputs/figures/*
 !outputs/figures/.gitkeep
+!outputs/figures/final_pr_auc_comparison.png
+!outputs/figures/final_precision_at_k_comparison.png
+!outputs/figures/final_recall_at_k_comparison.png
+!outputs/figures/final_cpu_gpu_training_time_comparison.png
+
+# Keep final summary metrics for GitHub presentation.
+# Ignore intermediate metrics by default.
+outputs/metrics/*
 !outputs/metrics/.gitkeep
+!outputs/metrics/final_model_comparison.csv
+!outputs/metrics/final_model_improvement_summary.csv
+!outputs/metrics/xgboost_cpu_gpu_comparison.csv
+
 mlruns/
 wandb/
 lightning_logs/
