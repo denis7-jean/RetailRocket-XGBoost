@@ -42,6 +42,8 @@ Initial EDA note: the planned candidate-pair framing is feasible but strongly im
 
 V1 dataset-building note: `src/02_build_datasets.py` uses the High-Intent Hybrid candidate formulation as the default modeling target. Candidate pairs must have at least one observation-window `addtocart` event or at least two observation-window `view` events. Training uses five rolling Policy 2 snapshots, while validation and test remain fixed chronological windows. The broad observed-pair formulation is retained in `outputs/metrics/dataset_build_report.csv` as a diagnostic baseline.
 
+V1 feature-building note: `src/03_build_features.py` creates leakage-safe behavioral features for each candidate pair using only that row's observation window. The feature matrix includes pair-level, visitor-level, and item-level activity counts, recency features, recent-window counts, ratios, and 7-day half-life time-decay scores.
+
 ## Time-Based Split Strategy
 
 The experiment uses chronological splits to reduce leakage and better reflect a real production scoring setup.
@@ -139,7 +141,8 @@ RetailRocket-XGBoost/
 |   `-- models/
 |-- src/
 |   |-- 01_prepare_events.py
-|   `-- 02_build_datasets.py
+|   |-- 02_build_datasets.py
+|   `-- 03_build_features.py
 |-- .gitignore
 |-- PROJECT_PLAN.md
 |-- README.md

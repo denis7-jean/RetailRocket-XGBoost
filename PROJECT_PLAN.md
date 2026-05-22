@@ -30,14 +30,14 @@ This checklist tracks the implementation phases for the RetailRocket purchase co
 
 ## 4. Create Behavioral Features
 
-- [ ] Build visitor-item event count features.
-- [ ] Build visitor-level activity features.
-- [ ] Build item-level popularity features.
-- [ ] Build recency features.
-- [ ] Add ratio or intensity features where useful.
-- [ ] Handle missing values consistently.
-- [ ] Confirm feature columns match across train, validation, and test.
-- [ ] Save final feature matrices and labels.
+- [x] Build visitor-item event count features.
+- [x] Build visitor-level activity features.
+- [x] Build item-level popularity features.
+- [x] Build recency features.
+- [x] Add ratio or intensity features where useful.
+- [x] Handle missing values consistently.
+- [x] Confirm feature columns match across train, validation, and test.
+- [x] Save final feature matrices and labels.
 
 ## 5. Train Logistic Regression Baseline
 
