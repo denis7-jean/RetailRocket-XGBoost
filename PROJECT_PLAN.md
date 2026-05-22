@@ -41,11 +41,11 @@ This checklist tracks the implementation phases for the RetailRocket purchase co
 
 ## 5. Train Logistic Regression Baseline
 
-- [ ] Create baseline preprocessing pipeline.
-- [ ] Train Logistic Regression on the training split.
-- [ ] Tune basic regularization settings on validation data.
-- [ ] Save model artifact under `outputs/models/`.
-- [ ] Save baseline metrics under `outputs/metrics/`.
+- [x] Create baseline preprocessing pipeline.
+- [x] Train Logistic Regression on the training split.
+- [x] Tune basic regularization settings on validation data.
+- [x] Save model artifact under `outputs/models/`.
+- [x] Save baseline metrics under `outputs/metrics/`.
 
 ## 6. Train CPU XGBoost
 

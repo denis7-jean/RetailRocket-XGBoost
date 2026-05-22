@@ -44,6 +44,8 @@ V1 dataset-building note: `src/02_build_datasets.py` uses the High-Intent Hybrid
 
 V1 feature-building note: `src/03_build_features.py` creates leakage-safe behavioral features for each candidate pair using only that row's observation window. The feature matrix includes pair-level, visitor-level, and item-level activity counts, recency features, recent-window counts, ratios, and 7-day half-life time-decay scores.
 
+Baseline modeling note: `src/04_train_logistic_baseline.py` trains a scikit-learn Logistic Regression pipeline with standard scaling and balanced class weights. This model serves as the linear reference point before the CPU and GPU XGBoost experiments.
+
 ## Time-Based Split Strategy
 
 The experiment uses chronological splits to reduce leakage and better reflect a real production scoring setup.
@@ -142,7 +144,8 @@ RetailRocket-XGBoost/
 |-- src/
 |   |-- 01_prepare_events.py
 |   |-- 02_build_datasets.py
-|   `-- 03_build_features.py
+|   |-- 03_build_features.py
+|   `-- 04_train_logistic_baseline.py
 |-- .gitignore
 |-- PROJECT_PLAN.md
 |-- README.md
