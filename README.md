@@ -132,6 +132,26 @@ Benchmark outputs should include:
 - Model configuration
 - Hardware notes
 
+## Final Results
+
+V1 task summary:
+
+- Target: high-intent `(visitorid, itemid)` purchase conversion in a future 14-day label window.
+- Train: 386,509 rolling-window samples, 375 positives, 0.0970% positive rate.
+- Validation: 79,618 samples, 71 positives, 0.0892% positive rate.
+- Test: 65,546 samples, 57 positives, 0.0870% positive rate.
+- Feature set: 42 leakage-safe behavioral features built from `events.csv`.
+
+Final model comparison:
+
+| Model | Selected model | Validation PR-AUC | Test PR-AUC | Test ROC-AUC | Test Precision@100 | Test Recall@100 | Test Precision@500 | Test Recall@500 |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| Logistic Regression | `logistic_regression_baseline` | 0.017757 | 0.013379 | 0.852662 | 0.040000 | 0.070175 | 0.014000 | 0.122807 |
+| CPU XGBoost | `xgboost_cpu_medium_spw_ratio_mds1` | 0.034122 | 0.026468 | 0.811744 | 0.050000 | 0.087719 | 0.014000 | 0.122807 |
+| GPU XGBoost | `xgboost_gpu_medium_spw_ratio_mds1` | 0.024310 | 0.032319 | 0.803964 | 0.050000 | 0.087719 | 0.014000 | 0.122807 |
+
+XGBoost improved PR-AUC over Logistic Regression. CPU XGBoost was the best validation-selected model in this run. GPU XGBoost accelerated training by about 2x to 2.8x across matching configurations, but did not clearly outperform CPU XGBoost by validation-selected quality. Because validation and test positives are sparse, these results should be interpreted as a controlled experiment rather than production-ready performance.
+
 ## Project Structure
 
 ```text

@@ -66,26 +66,26 @@ This checklist tracks the implementation phases for the RetailRocket purchase co
 
 ## 8. Evaluate and Compare Models
 
-- [ ] Evaluate validation and test PR-AUC.
-- [ ] Evaluate ROC-AUC, precision, recall, and F1-score.
-- [ ] Select classification thresholds using validation data.
-- [ ] Compare baseline, CPU XGBoost, and GPU XGBoost.
-- [ ] Summarize model quality and training speed tradeoffs.
+- [x] Evaluate validation and test PR-AUC.
+- [x] Evaluate ROC-AUC, precision, recall, and F1-score.
+- [x] Select classification thresholds using validation data.
+- [x] Compare baseline, CPU XGBoost, and GPU XGBoost.
+- [x] Summarize model quality and training speed tradeoffs.
 
 ## 9. Produce Plots and Final Findings
 
-- [ ] Plot precision-recall curves.
-- [ ] Plot ROC curves.
-- [ ] Plot CPU vs GPU training time comparison.
-- [ ] Plot metric comparison table or bar chart.
-- [ ] Save figures under `outputs/figures/`.
-- [ ] Save final metrics tables under `outputs/metrics/`.
+- [x] Plot precision-recall curves.
+- [x] Plot ROC curves.
+- [x] Plot CPU vs GPU training time comparison.
+- [x] Plot metric comparison table or bar chart.
+- [x] Save figures under `outputs/figures/`.
+- [x] Save final metrics tables under `outputs/metrics/`.
 
 ## 10. Polish README with Real Results
 
-- [ ] Add final dataset row counts and split sizes.
-- [ ] Add final feature list.
-- [ ] Add model configuration table.
-- [ ] Add evaluation results.
-- [ ] Add CPU vs GPU benchmark findings.
-- [ ] Add final interpretation and next-step recommendations.
+- [x] Add final dataset row counts and split sizes.
+- [x] Add final feature list.
+- [x] Add model configuration table.
+- [x] Add evaluation results.
+- [x] Add CPU vs GPU benchmark findings.
+- [x] Add final interpretation and next-step recommendations.
